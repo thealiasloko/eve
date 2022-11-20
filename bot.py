@@ -102,22 +102,22 @@ async def is_owner(user_id):
     return status
 
 
-@dp.message_handler(commands=['start', 'help'], commands_prefix=PREFIX)
+@dp.message_handler(commands=['start', 'cmds', 'help'], commands_prefix=PREFIX)
 async def helpstr(message: types.Message):
     # await message.answer_chat_action('typing')
     keyboard_markup = types.InlineKeyboardMarkup(row_width=3)
-    btns = types.InlineKeyboardButton("Bot Source", url="https://github.com/xbinner18/Mrbannker")
+    btns = types.InlineKeyboardButton("Owner", url="https://t.me/DiegoAkk")
     keyboard_markup.row(btns)
     FIRST = message.from_user.first_name
     MSG = f'''
-Hello {FIRST}, Im {BOT_NAME}
-U can find my Boss  <a href="tg://user?id={OWNER}">HERE</a>
-Cmds /chk /info /bin'''
+𝐇𝐨𝐥𝐚 𝐩𝐚𝐢 {FIRST}, 𝐌𝐢 𝐧𝐨𝐦𝐛𝐫𝐞 𝐞𝐬 {BOT_NAME}
+𝐂𝐡𝐞𝐜𝐤𝐞𝐚 𝐭𝐮𝐬 𝐜𝐜 𝐚 𝐠𝐮𝐬𝐭𝐨, 𝐩𝐚𝐫𝐚 𝐞𝐬𝐨 𝐦𝐞 𝐡𝐢𝐜𝐢𝐞𝐫𝐨𝐧 𝐱𝐃. 𝐌𝐢 𝐎𝐰𝐧𝐞𝐫 𝐞𝐬: <a href="tg://user?id={OWNER}">DiegoAkk</a>
+𝙔 𝙚𝙨𝙩𝙤𝙨 𝙨𝙤𝙣 𝙢𝙞𝙨 𝙘𝙤𝙢𝙖𝙣𝙙𝙤𝙨: /gen /me /id /chk /info /bin'''
     await message.answer(MSG, reply_markup=keyboard_markup,
                         disable_web_page_preview=True)
 
 
-@dp.message_handler(commands=['info', 'id'], commands_prefix=PREFIX)
+@dp.message_handler(commands=['info', 'me', 'id'], commands_prefix=PREFIX)
 async def info(message: types.Message):
     if message.reply_to_message:
         user_id = message.reply_to_message.from_user.id
@@ -148,7 +148,7 @@ async def binio(message: types.Message):
     BIN = message.text[len('/bin '):]
     if len(BIN) < 6:
         return await message.reply(
-                   'Send bin not ass'
+                   '𝙀𝙨𝙘𝙧𝙞𝙗𝙚 𝙪𝙣 𝙗𝙞𝙣 𝙫á𝙡𝙞𝙙𝙤 𝙬𝙣'
         )
     r = requests.get(
                f'https://bins.ws/search?bins={BIN[:6]}'
@@ -158,8 +158,8 @@ async def binio(message: types.Message):
     INFO = f'''
 {k.text[62:]}
 SENDER: <a href="tg://user?id={ID}">{FIRST}</a>
-BOT⇢ @{BOT_USERNAME}
-OWNER⇢ <a href="tg://user?id={OWNER}">LINK</a>
+𝗕𝗢𝗧⇢ @{BOT_USERNAME}
+𝗢𝗪𝗡𝗘𝗥⇢ <a href="tg://user?id={OWNER}">LINK</a>
 '''
     await message.reply(INFO)
 
@@ -196,7 +196,7 @@ Genrated 1 card of <code>{ccn}</code>
 <code>{cards}</code>
 BY: <a href="tg://user?id={ID}">{FIRST}</a>
 BOT⇢ @{BOT_USERNAME}
-OWNER⇢ <a href="tg://user?id={OWNER}">LINK</a>
+OWNER⇢ <a href="tg://user?id={OWNER}">DiegoAkk</a>
 '''
     await message.reply(DATA)
 
@@ -304,42 +304,42 @@ async def ch(message: types.Message):
 
         if 'true' in rx.text:
             return await message.reply(f'''
-✅<b>CC</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
-<b>STATUS</b>➟ #CHARGED 25$
-<b>MSG</b>➟ {msg}
-<b>TOOK:</b> <code>{toc - tic:0.2f}</code>(s)
-<b>CHKBY</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
-<b>OWNER</b>: {await is_owner(ID)}
-<b>BOT</b>: @{BOT_USERNAME}''')
+✅<b>[♤]𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
+<b>[♤]𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ #CHARGED 25$
+<b>[♤]𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b>➟ {msg}
+<b>[♤]𝐓𝐎𝐎𝐊:</b> <code>{toc - tic:0.2f}</code>(s)
+<b>[♤]𝐂𝐇𝐊𝐁𝐘</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
+<b>[♤]𝐎𝐖𝐍𝐄𝐑</b>: {await is_owner(ID)}
+<b>[♤]𝐁𝐎𝐓</b>: @{BOT_USERNAME}''')
 
         if 'security code' in rx.text:
             return await message.reply(f'''
-✅<b>CC</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
-<b>STATUS</b>➟ #CCN
-<b>MSG</b>➟ {msg}
-<b>TOOK:</b> <code>{toc - tic:0.2f}</code>(s)
-<b>CHKBY</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
-<b>OWNER</b>: {await is_owner(ID)}
-<b>BOT</b>: @{BOT_USERNAME}''')
+<b>𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
+<b>𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ #CCN ✅
+<b>𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b>➟ {msg}
+<b>𝐓𝐎𝐎𝐊:</b> <code>{toc - tic:0.2f}</code>(s)
+<b>𝐂𝐇𝐊𝐁𝐘</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
+<b>𝐎𝐖𝐍𝐄𝐑</b>: {await is_owner(ID)}
+<b>𝐁𝐎𝐓</b>: @{BOT_USERNAME}''')
 
         if 'false' in rx.text:
             return await message.reply(f'''
-❌<b>CC</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
-<b>STATUS</b>➟ #Declined
-<b>MSG</b>➟ {msg}
-<b>TOOK:</b> <code>{toc - tic:0.2f}</code>(s)
-<b>CHKBY</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
-<b>OWNER</b>: {await is_owner(ID)}
-<b>BOT</b>: @{BOT_USERNAME}''')
+<b>𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
+<b>𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ #Declined ❌
+<b>𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b>➟ {msg}
+<b>𝐓𝐎𝐎𝐊:</b> <code>{toc - tic:0.2f}</code>(s)
+<b>𝐂𝐇𝐊𝐁𝐘</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
+<b>𝐎𝐖𝐍𝐄𝐑</b>: {await is_owner(ID)}
+<b>𝐁𝐎𝐓</b>: @{BOT_USERNAME}''')
 
         await message.reply(f'''
-❌<b>CC</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
-<b>STATUS</b>➟ DEAD
-<b>MSG</b>➟ {rx.text}
-<b>TOOK:</b> <code>{toc - tic:0.2f}</code>(s)
-<b>CHKBY</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
-<b>OWNER</b>: {await is_owner(ID)}
-<b>BOT</b>: @{BOT_USERNAME}''')
+<b>𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
+<b>𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ DEAD ❌
+<b>𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b>➟ {rx.text}
+<b>𝐓𝐎𝐎𝐊:</b> <code>{toc - tic:0.2f}</code>(s)
+<b>𝐂𝐇𝐊𝐁𝐘</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
+<b>𝐎𝐖𝐍𝐄𝐑</b>: {await is_owner(ID)}
+<b>𝐁𝐎𝐓</b>: @{BOT_USERNAME}''')
 
 
 if __name__ == '__main__':
