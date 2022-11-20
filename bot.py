@@ -326,7 +326,8 @@ async def ch(message: types.Message):
 
         if 'false' in rx.text:
             return await message.reply(f'''
-<b>- - - - - - - - - - - - 𝗦𝘁𝗿𝗶𝗽𝗲 𝗖𝗵𝗮𝗿𝗴𝗲𝗱 25$ - - - - - - - - - - -</b>
+<b>- - - - - - - - - - 𝗦𝘁𝗿𝗶𝗽𝗲 𝗖𝗵𝗮𝗿𝗴𝗲𝗱 25$ - - - - - - - - -</b>
+
 <b>[🝂]𝐂𝐂</b> <code>{ccn}|{mm}|{yy}|{cvv}</code>
 <b>[🝂]𝐒𝐓𝐀𝐓𝐔𝐒</b> #Declined ❌
 <b>[🝂]𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b> <b>{msg}</b>
