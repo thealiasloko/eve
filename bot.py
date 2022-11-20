@@ -221,7 +221,7 @@ async def ch(message: types.Message):
             cc = message.text[len('/chk '):]
 
         if len(cc) == 0:
-            return await message.reply("<b>🚸Stripe Charged 25$🚸</b>")
+            return await message.reply("<b>🔱 Stripe Charged 25$ 🔱</b>")
 
         x = re.findall(r'\d+', cc)
         ccn = x[0]
@@ -306,8 +306,8 @@ async def ch(message: types.Message):
 
         if 'true' in rx.text:
             return await message.reply(f'''
-✅<b>[♤]𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
-<b>[♤]𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ #CHARGED 25$
+<b>[♤]𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
+<b>[♤]𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ #CHARGED 25$ 💰
 <b>[♤]𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b>➟ {msg}
 <b>[♤]𝐓𝐎𝐎𝐊:</b> <code>{toc - tic:0.2f}</code>(s)
 <b>[♤]𝐂𝐇𝐊𝐁𝐘</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
@@ -316,30 +316,30 @@ async def ch(message: types.Message):
 
         if 'security code' in rx.text:
             return await message.reply(f'''
-<b>[♤]𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
-<b>[♤]𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ #CCN ✅
-<b>[♤]𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b>➟ {msg}
-<b>[♤]𝐓𝐎𝐎𝐊:</b> <code>{toc - tic:0.2f}</code>(s)
-<b>[♤]𝐂𝐇𝐊𝐁𝐘</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
-<b>[♤]𝐎𝐖𝐍𝐄𝐑</b>: {await is_owner(ID)}
-<b>[♤]𝐁𝐎𝐓</b>: @{BOT_USERNAME}''')
+<b>[🝂]𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
+<b>[🝂]𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ #CCN ✅
+<b>[🝂]𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b>➟ {msg}
+<b>[🝂]𝐓𝐎𝐎𝐊:</b> <code>{toc - tic:0.2f}</code>(s)
+<b>[🝂]𝐂𝐇𝐊𝐁𝐘</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
+<b>[🝂]𝐎𝐖𝐍𝐄𝐑</b>: {await is_owner(ID)}
+<b>[🝂]𝐁𝐎𝐓</b>: @{BOT_USERNAME}''')
 
         if 'false' in rx.text:
             return await message.reply(f'''
-<b>[♤]𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
-<b>[♤]𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ #Declined ❌
-<b>[♤]𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b>➟ {msg}
-<b>[♤]𝐓𝐎𝐎𝐊:</b> <code>{toc - tic:0.2f}</code>(s)
-<b>[♤]𝐂𝐇𝐊𝐁𝐘</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
-<b>[♤]𝐎𝐖𝐍𝐄𝐑</b>: {await is_owner(ID)}
-<b>[♤]𝐁𝐎𝐓</b>: @{BOT_USERNAME}''')
+<b>[🝂]𝐂𝐂</b> <code>{ccn}|{mm}|{yy}|{cvv}</code>
+<b>[🝂]𝐒𝐓𝐀𝐓𝐔𝐒</b> #Declined ❌
+<b>[🝂]𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b> {msg}
+<b>[🝂]𝐓𝐎𝐎𝐊:</b> <code>{toc - tic:0.2f}</code>(s)
+<b>[🝂]𝐂𝐇𝐊𝐁𝐘</b> <a href="tg://user?id={ID}">{FIRST}</a>
+<b>[🝂]𝐎𝐖𝐍𝐄𝐑</b>: {await is_owner(ID)}
+<b>[🝂]𝐁𝐎𝐓</b>: @{BOT_USERNAME}''')
 
         await message.reply(f'''
-<b>[♤]𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
-<b>[♤]𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ DEAD ❌
-<b>[♤]𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b>➟ {rx.text}
+<b>[🝂]𝐂𝐂</b> <code>{ccn}|{mm}|{yy}|{cvv}</code>
+<b>[🝂]𝐒𝐓𝐀𝐓𝐔𝐒</b> DEAD ❌
+<b>[♤]𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b> {rx.text}
 <b>[♤]𝐓𝐎𝐎𝐊:</b> <code>{toc - tic:0.2f}</code>(s)
-<b>[♤] 𝐂𝐇𝐊𝐁𝐘</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
+<b>[♤] 𝐂𝐇𝐊𝐁𝐘</b> <a href="tg://user?id={ID}">{FIRST}</a>
 <b>[♤]𝐎𝐖𝐍𝐄𝐑</b>: {await is_owner(ID)}
 <b>[♤]𝐁𝐎𝐓</b>: @{BOT_USERNAME}''')
 
