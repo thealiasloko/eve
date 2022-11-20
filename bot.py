@@ -203,14 +203,14 @@ async def genrate(message: types.Message):
     await message.reply(DATA)
 
 
-@dp.message_handler(commands=['chk'], commands_prefix=PREFIX)
+@dp.message_handler(commands=['stp'], commands_prefix=PREFIX)
 async def ch(message: types.Message):
     await message.answer_chat_action('typing')
     tic = time.perf_counter()
     ID = message.from_user.id
     FIRST = message.from_user.first_name
     try:
-        await dp.throttle('chk', rate=ANTISPAM)
+        await dp.throttle('stp', rate=ANTISPAM)
     except Throttled:
         await message.reply('<b>Too many requests!</b>\n'
                             f'Blocked For {ANTISPAM} seconds')
@@ -218,7 +218,7 @@ async def ch(message: types.Message):
         if message.reply_to_message:
             cc = message.reply_to_message.text
         else:
-            cc = message.text[len('/chk '):]
+            cc = message.text[len('/stp '):]
 
         if len(cc) == 0:
             return await message.reply("<b>🔱 Stripe Charged 25$ 🔱</b>")
@@ -326,7 +326,7 @@ async def ch(message: types.Message):
 
         if 'false' in rx.text:
             return await message.reply(f'''
-<b>- - - - - - - - - - 𝗦𝘁𝗿𝗶𝗽𝗲 𝗖𝗵𝗮𝗿𝗴𝗲𝗱 25$ - - - - - - - - -</b>
+<b>- - - - - - - - 𝗦𝘁𝗿𝗶𝗽𝗲 𝗖𝗵𝗮𝗿𝗴𝗲𝗱 25$ - - - - - - -</b>
 
 <b>[🝂]𝐂𝐂</b> <code>{ccn}|{mm}|{yy}|{cvv}</code>
 <b>[🝂]𝐒𝐓𝐀𝐓𝐔𝐒</b> #Declined ❌
