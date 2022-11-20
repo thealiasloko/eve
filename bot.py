@@ -306,7 +306,7 @@ async def ch(message: types.Message):
 
         if 'true' in rx.text:
             return await message.reply(f'''
-<b>- - - -  - - - 𝗦𝘁𝗿𝗶𝗽𝗲 𝗖𝗵𝗮𝗿𝗴𝗲𝗱 25$ - - - - - - </b>
+<b>- - - - - - - 𝗦𝘁𝗿𝗶𝗽𝗲 𝗖𝗵𝗮𝗿𝗴𝗲𝗱 25$ - - - - - - </b>
 
 <b>[♤]𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
 <b>[♤]𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ #CHARGED 25$ 💰
@@ -318,7 +318,7 @@ async def ch(message: types.Message):
 
         if 'security code' in rx.text:
             return await message.reply(f'''
-<b>- - - -  - - - 𝗦𝘁𝗿𝗶𝗽𝗲 𝗖𝗵𝗮𝗿𝗴𝗲𝗱 25$ - - - - - - </b>
+<b>- - - - - - - 𝗦𝘁𝗿𝗶𝗽𝗲 𝗖𝗵𝗮𝗿𝗴𝗲𝗱 25$ - - - - - - </b>
 
 <b>[🝂]𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
 <b>[🝂]𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ #CCN ✅
@@ -330,7 +330,7 @@ async def ch(message: types.Message):
 
         if 'false' in rx.text:
             return await message.reply(f'''
-<b>- - - -  - - - 𝗦𝘁𝗿𝗶𝗽𝗲 𝗖𝗵𝗮𝗿𝗴𝗲𝗱 25$ - - - - - - </b>
+<b>- - - - - - - 𝗦𝘁𝗿𝗶𝗽𝗲 𝗖𝗵𝗮𝗿𝗴𝗲𝗱 25$ - - - - - - </b>
 
 <b>[🝂]𝐂𝐂</b> <code>{ccn}|{mm}|{yy}|{cvv}</code>
 <b>[🝂]𝐒𝐓𝐀𝐓𝐔𝐒</b> #Declined ❌
@@ -341,7 +341,7 @@ async def ch(message: types.Message):
 <b>[🝂]𝐁𝐎𝐓</b>: @{BOT_USERNAME}''')
 
         await message.reply(f'''
-<b>- - - -  - - - 𝗦𝘁𝗿𝗶𝗽𝗲 𝗖𝗵𝗮𝗿𝗴𝗲𝗱 25$ - - - - - - </b>
+<b>- - - - - - - 𝗦𝘁𝗿𝗶𝗽𝗲 𝗖𝗵𝗮𝗿𝗴𝗲𝗱 25$ - - - - - - </b>
 
 <b>[🝂]𝐂𝐂</b> <code>{ccn}|{mm}|{yy}|{cvv}</code>
 <b>[🝂]𝐒𝐓𝐀𝐓𝐔𝐒</b> DEAD ❌
