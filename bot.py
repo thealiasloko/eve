@@ -192,11 +192,13 @@ async def genrate(message: types.Message):
             cards = gen(first_6=ccn, mm=mm)
     await asyncio.sleep(3)
     DATA = f'''
-Genrated 1 card of <code>{ccn}</code>
+𝘾𝘾𝙎 𝙂𝙀𝙉𝙀𝙍𝘼𝘿𝘼𝙎 𝘿𝙀: <code>{ccn}</code>
+------------------------------------------------
 <code>{cards}</code>
-BY: <a href="tg://user?id={ID}">{FIRST}</a>
-BOT⇢ @{BOT_USERNAME}
-OWNER⇢ <a href="tg://user?id={OWNER}">DiegoAkk</a>
+------------------------------------------------
+[🝂] 𝙂𝙚𝙣𝙚𝙧𝙖𝙙𝙖𝙨 𝙥𝙤𝙧: <a href="tg://user?id={ID}">{FIRST}</a>
+[🝂] 𝗕𝗢𝗧⇢ @{BOT_USERNAME}
+[🝂] 𝗢𝗪𝗡𝗘𝗥⇢ <a href="tg://user?id={OWNER}">DiegoAkk</a>
 '''
     await message.reply(DATA)
 
@@ -219,7 +221,7 @@ async def ch(message: types.Message):
             cc = message.text[len('/chk '):]
 
         if len(cc) == 0:
-            return await message.reply("<b>No Card to chk</b>")
+            return await message.reply("<b>🚸Stripe Charged 25$🚸</b>")
 
         x = re.findall(r'\d+', cc)
         ccn = x[0]
