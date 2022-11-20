@@ -40,8 +40,8 @@ BOT_ID = bot_info.id
 
 # USE YOUR ROTATING PROXY API IN DICT FORMAT http://user:pass@providerhost:port
 proxies = {
-           'http': 'http://qnuomzzl-rotate:4i44gnayqk7c@p.webshare.io:80/',
-           'https': 'http://qnuomzzl-rotate:4i44gnayqk7c@p.webshare.io:80/'
+           'http': 'http://xdixelha-rotate:znl0jp6ckhsf@p.webshare.io:80/',
+           'https': 'http://xdixelha-rotate:znl0jp6ckhsf@p.webshare.io:80/'
 }
 
 session = requests.Session()
@@ -157,9 +157,9 @@ async def binio(message: types.Message):
     k = soup.find("div", {"class": "page"})
     INFO = f'''
 {k.text[62:]}
-SENDER: <a href="tg://user?id={ID}">{FIRST}</a>
+𝐂𝐇𝐊𝐁𝐘: <a href="tg://user?id={ID}">{FIRST}</a>
 𝗕𝗢𝗧⇢ @{BOT_USERNAME}
-𝗢𝗪𝗡𝗘𝗥⇢ <a href="tg://user?id={OWNER}">LINK</a>
+𝗢𝗪𝗡𝗘𝗥⇢ <a href="tg://user?id={OWNER}">DiegoAkk</a>
 '''
     await message.reply(INFO)
 
@@ -316,32 +316,32 @@ async def ch(message: types.Message):
 
         if 'security code' in rx.text:
             return await message.reply(f'''
-<b>𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
-<b>𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ #CCN ✅
-<b>𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b>➟ {msg}
-<b>𝐓𝐎𝐎𝐊:</b> <code>{toc - tic:0.2f}</code>(s)
-<b>𝐂𝐇𝐊𝐁𝐘</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
-<b>𝐎𝐖𝐍𝐄𝐑</b>: {await is_owner(ID)}
-<b>𝐁𝐎𝐓</b>: @{BOT_USERNAME}''')
+<b>[♤]𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
+<b>[♤]𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ #CCN ✅
+<b>[♤]𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b>➟ {msg}
+<b>[♤]𝐓𝐎𝐎𝐊:</b> <code>{toc - tic:0.2f}</code>(s)
+<b>[♤]𝐂𝐇𝐊𝐁𝐘</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
+<b>[♤]𝐎𝐖𝐍𝐄𝐑</b>: {await is_owner(ID)}
+<b>[♤]𝐁𝐎𝐓</b>: @{BOT_USERNAME}''')
 
         if 'false' in rx.text:
             return await message.reply(f'''
-<b>𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
-<b>𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ #Declined ❌
-<b>𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b>➟ {msg}
-<b>𝐓𝐎𝐎𝐊:</b> <code>{toc - tic:0.2f}</code>(s)
-<b>𝐂𝐇𝐊𝐁𝐘</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
-<b>𝐎𝐖𝐍𝐄𝐑</b>: {await is_owner(ID)}
-<b>𝐁𝐎𝐓</b>: @{BOT_USERNAME}''')
+<b>[♤]𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
+<b>[♤]𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ #Declined ❌
+<b>[♤]𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b>➟ {msg}
+<b>[♤]𝐓𝐎𝐎𝐊:</b> <code>{toc - tic:0.2f}</code>(s)
+<b>[♤]𝐂𝐇𝐊𝐁𝐘</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
+<b>[♤]𝐎𝐖𝐍𝐄𝐑</b>: {await is_owner(ID)}
+<b>[♤]𝐁𝐎𝐓</b>: @{BOT_USERNAME}''')
 
         await message.reply(f'''
-<b>𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
-<b>𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ DEAD ❌
-<b>𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b>➟ {rx.text}
-<b>𝐓𝐎𝐎𝐊:</b> <code>{toc - tic:0.2f}</code>(s)
-<b>𝐂𝐇𝐊𝐁𝐘</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
-<b>𝐎𝐖𝐍𝐄𝐑</b>: {await is_owner(ID)}
-<b>𝐁𝐎𝐓</b>: @{BOT_USERNAME}''')
+<b>[♤]𝐂𝐂</b>➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
+<b>[♤]𝐒𝐓𝐀𝐓𝐔𝐒</b>➟ DEAD ❌
+<b>[♤]𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄</b>➟ {rx.text}
+<b>[♤]𝐓𝐎𝐎𝐊:</b> <code>{toc - tic:0.2f}</code>(s)
+<b>[♤] 𝐂𝐇𝐊𝐁𝐘</b>➟ <a href="tg://user?id={ID}">{FIRST}</a>
+<b>[♤]𝐎𝐖𝐍𝐄𝐑</b>: {await is_owner(ID)}
+<b>[♤]𝐁𝐎𝐓</b>: @{BOT_USERNAME}''')
 
 
 if __name__ == '__main__':
