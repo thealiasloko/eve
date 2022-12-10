@@ -150,13 +150,15 @@ async def binio(message: types.Message):
         return await message.reply(
                    '𝙀𝙨𝙘𝙧𝙞𝙗𝙚 𝙪𝙣 𝙗𝙞𝙣 𝙫á𝙡𝙞𝙙𝙤 𝙬𝙣'
         )
-    r = requests.get(
-               f'https://bins.ws/search?bins={BIN[:6]}'
-    ).text
-    soup = bs(r, features='html.parser')
-    k = soup.find("div", {"class": "page"})
+    bin = requests.get(f'https://adyen-enc-and-bin-info.herokuapp.com/bin/{cc[:6]}')
+    if not bin:
+        return
+    bin_json =  bin.json()
     INFO = f'''
-{k.text[62:]}
+╟ info- ↯__:
+╟ ╙ {bin_json['vendor']} - {bin_json['type']} - {bin_json['level']}
+╟ ╙ {bin_json['bank']}
+╟ ╙ {bin_json['country_iso']} - {bin_json['flag']}
 𝐂𝐇𝐊𝐁𝐘: <a href="tg://user?id={ID}">{FIRST}</a>
 𝗕𝗢𝗧⇢ @{BOT_USERNAME}
 𝗢𝗪𝗡𝗘𝗥⇢ <a href="tg://user?id={OWNER}">DiegoAkk</a>
