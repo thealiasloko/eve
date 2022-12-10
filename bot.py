@@ -151,6 +151,9 @@ async def binio(message: types.Message):
                    '𝙀𝙨𝙘𝙧𝙞𝙗𝙚 𝙪𝙣 𝙗𝙞𝙣 𝙫á𝙡𝙞𝙙𝙤 𝙬𝙣'
         )
     ccs = []
+    cc,mes,ano,cvv = cards
+    if cc in ccs:
+        return
     ccs.append(cc)
     bin = requests.get(f'https://adyen-enc-and-bin-info.herokuapp.com/bin/{cc[:6]}')
     if not bin:
